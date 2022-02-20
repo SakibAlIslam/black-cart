@@ -47,9 +47,8 @@ const ImgContainer = styled.div`
   flex: 1;
 `;
 const Image = styled.img`
-  width: 85%;
   height: 100%;
-  padding-left: 200px;
+  padding-left: 150px;
   padding-top: 20px;
 `;
 const InfoContainer = styled.div`
