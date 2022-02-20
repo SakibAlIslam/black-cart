@@ -11,6 +11,7 @@ const Arrow = styled.div`
   width: 50px;
   height: 50px;
   background-color: #fff7f7;
+  border-radius: 50%
 `;
 
 const Slider = () => {
@@ -18,7 +19,9 @@ const Slider = () => {
     <Container>
       <Arrow>
         <ArrowLeft />
-        <ArrowRight />
+      </Arrow>
+      <Arrow>
+      <ArrowRight />
       </Arrow>
     </Container>
   );
