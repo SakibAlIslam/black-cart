@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 import { ArrowLeft, ArrowRight } from "@mui/icons-material";
+import { sliderItems } from "../../fakeData/data";
 
 const Container = styled.div`
   width: 100%;
   height: 80vh;
   display: flex;
   position: relative;
+  overflow: hidden;
 `;
 const Arrow = styled.div`
   width: 50px;
@@ -25,25 +27,30 @@ const Arrow = styled.div`
   margin: auto;
   cursor: poiner;
   opacity: 0.5;
+  z-index: 1000;
 `;
 
 const Wrapper = styled.div`
   height: 100%;
+  display: flex;
+  transform: translateX(${props => props.slideIndex * -100}vw);
+  transition: all 1s ease;
 `;
 const Slide = styled.div`
   width: 100vw;
   heigth: 80vh;
   display: flex;
   align-items: center;
+  background-color: #${(props) => props.bg};
 `;
 const ImgContainer = styled.div`
   height: 100%;
   flex: 1;
 `;
 const Image = styled.img`
-  width: 70%;
-  padding-left: 200px;
-  padding-top: 20px
+  height: 100%;
+  padding-left: 150px;
+  padding-top: 20px;
 `;
 const InfoContainer = styled.div`
   flex: 1;
@@ -68,33 +75,49 @@ const Description = styled.p`
 // `;
 
 const Slider = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction) => {
+      
+      if(direction === 'left') {
+          setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2)
+      } else{
+          setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0)
+      }
+  };
+
   return (
     <Container>
-      <Arrow direction="left">
+      <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeft />
       </Arrow>
-      <Wrapper>
-        <Slide>
-          <ImgContainer>
-            <Image src="https://i.ibb.co/DG69bQ4/2.png"></Image>
-          </ImgContainer>
-          <InfoContainer>
-            <Title>Summer Sale</Title>
-            <Description>
-              DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS
-            </Description>
-            <Button sx={{
-                 '&.MuiButton-root': {
-                    backgroundColor: '#ffc303',
-                    color: 'black',
-                    borderRadius: '4px',
-                    padding: '7px 15px',
+      <Wrapper slideIndex={slideIndex}>
+        {sliderItems?.map((item) => (
+          <Slide bg={item?.bg}>
+            <ImgContainer>
+              <Image src={item?.img}></Image>
+            </ImgContainer>
+            <InfoContainer>
+              <Title>{item?.title}</Title>
+              <Description>
+                {item?.desc}
+              </Description>
+              <Button
+                sx={{
+                  "&.MuiButton-root": {
+                    backgroundColor: "#ffc303",
+                    color: "black",
+                    borderRadius: "4px",
+                    padding: "7px 15px",
                   },
-            }} >SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
+                }}
+              >
+                SHOP NOW
+              </Button>
+            </InfoContainer>
+          </Slide>
+        ))}
       </Wrapper>
-      <Arrow direction="right">
+      <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowRight />
       </Arrow>
     </Container>
