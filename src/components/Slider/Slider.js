@@ -14,7 +14,7 @@ const Container = styled.div`
 const Arrow = styled.div`
   width: 50px;
   height: 50px;
-  background-color: #fff7f7;
+  background-color: #ffffff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -25,7 +25,6 @@ const Arrow = styled.div`
   left: ${(props) => props.direction === "left" && "10px"};
   right: ${(props) => props.direction === "right" && "10px"};
   margin: auto;
-  cursor: poiner;
   opacity: 0.5;
   z-index: 1000;
 `;

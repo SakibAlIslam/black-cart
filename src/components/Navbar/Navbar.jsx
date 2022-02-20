@@ -57,6 +57,8 @@ const Right = styled.div`
 `;
 const MenuLink = styled.div`
     font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
     cursor:pointer
 `;
 
