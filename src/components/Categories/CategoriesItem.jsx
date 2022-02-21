@@ -5,7 +5,7 @@ const Container = styled.div`
 
 `
 
-const CategoriesItem = () => {
+const CategoriesItem = ({item}) => {
   return (
     <Container>categories</Container>
   )
