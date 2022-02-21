@@ -20,13 +20,25 @@ const Description = styled.div`
     margin:0px 0px 20px 0px;
 `
 const InputContainer = styled.div`
-
+    width: 50%;
+    height: 40px;
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
 `
 const Input = styled.input`
-
+    border: none;
+    flex: 8;
+    padding: 0px 0px 0px 20px;
+    outline:none
 `
 const Button = styled.button`
-
+    flex: 1;
+    border:none;
+    background-color:#ffc303;
+    color: white;
+    cursor:pointer
 `
 
 const NewsLetter = () => {
