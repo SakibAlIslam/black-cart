@@ -1,4 +1,4 @@
-import { Facebook, Instagram, LinkedIn, Pinterest, Twitter, WhatsApp } from '@mui/icons-material';
+import { Facebook, Instagram, LinkedIn, MailOutline, Phone, Pinterest, Room, Twitter, WhatsApp } from '@mui/icons-material';
 import React from 'react'
 import styled from 'styled-components'
 import logo from '../Navbar/logo/blackcartLogo.png'
@@ -18,7 +18,7 @@ const Logo = styled.img`
 `;
 const Desc = styled.p`
     font-size:18px;
-    padding: 10px 0px
+    padding: 15px 0px
 `;
 const SocialContainer = styled.div`
     display:flex;
@@ -31,7 +31,7 @@ const Center = styled.div`
     flex:1;
     padding: 30px;
 `;
-const Title = styled.h2`
+const Title = styled.h3`
     margin-bottom: 20px;
 `;
 const List = styled.ul`
@@ -51,6 +51,15 @@ const ListItem = styled.li`
 const Right = styled.div`
     flex:1;
     padding: 30px;
+`;
+const ContactItem = styled.div`
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 0px 10px 0px;
+`;
+const Payment = styled.img`
+    width: 50%;
 `;
 
 const Footer = () => {
@@ -95,7 +104,22 @@ const Footer = () => {
                     <ListItem>Terms</ListItem>
                 </List>
             </Center>
-            <Right></Right>
+            <Right>
+                <Title>Contact</Title>
+                <ContactItem>
+                    <Room sx={{marginRight: '10px'}}/>
+                    32, Justice SM Morshed Sharany Agargoan
+                </ContactItem>
+                <ContactItem>
+                    <Phone sx={{marginRight: '10px'}}/>
+                    +880 1931098743
+                </ContactItem>
+                <ContactItem>
+                    <MailOutline sx={{marginRight: '10px'}}/>
+                    blackCart@gmail.com
+                </ContactItem>
+                <Payment src="https://i.ibb.co/Tvg28r9/48-480088-payment-method-credit-card-master-card-hd-png.png" />
+            </Right>
         </Container>
     )
 }
