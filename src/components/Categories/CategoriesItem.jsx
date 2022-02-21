@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const Container = styled.div`
     flex:1;
-    margin:3px;
-    height: 70vh;
+    margin:8px;
+    height: 75vh;
 `
 const Image = styled.img`
     width: 100%;
