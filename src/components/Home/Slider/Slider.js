@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "@mui/material/Button";
 import { ArrowLeft, ArrowRight } from "@mui/icons-material";
-import { sliderItems } from "../../fakeData/data";
+import { sliderItems } from "../../../fakeData/data";
 
 const Container = styled.div`
   width: 100%;

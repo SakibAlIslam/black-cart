@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { popularProducts } from '../../fakeData/data';
+import { popularProducts } from '../../../fakeData/data';
 import ProductItem from './ProductItem';
 
 const Container = styled.div`
