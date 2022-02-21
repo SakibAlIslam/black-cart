@@ -17,7 +17,7 @@ const Logo = styled.img`
     width:50%;
 `;
 const Desc = styled.p`
-    font-size:20px;
+    font-size:18px;
     padding: 10px 0px
 `;
 const SocialContainer = styled.div`
@@ -28,12 +28,29 @@ const SocialIcon = styled.div`
     cursor:pointer;
 `;
 const Center = styled.div`
-    flex:1
-
+    flex:1;
+    padding: 30px;
 `;
-const Right = styled.div`
-    flex:1
+const Title = styled.h2`
+    margin-bottom: 20px;
+`;
+const List = styled.ul`
+    margin:0;
+    padding:0;
+    list-style: none;
+    display:flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+`;
+const ListItem = styled.li`
+    width: 50%;
+    margin-bottom:10px;
+`;
 
+
+const Right = styled.div`
+    flex:1;
+    padding: 30px;
 `;
 
 const Footer = () => {
@@ -65,7 +82,19 @@ const Footer = () => {
                     </SocialIcon>
                 </SocialContainer>
             </Left>
-            <Center></Center>
+            <Center>
+                <Title>Useful Links</Title>
+                <List>
+                    <ListItem>Home</ListItem>
+                    <ListItem>Cart</ListItem>
+                    <ListItem>Man Fashion</ListItem>
+                    <ListItem>Woman Fashion</ListItem>
+                    <ListItem>Accessories</ListItem>
+                    <ListItem>My Account</ListItem>
+                    <ListItem>Order Tracking</ListItem>
+                    <ListItem>Terms</ListItem>
+                </List>
+            </Center>
             <Right></Right>
         </Container>
     )
