@@ -6,14 +6,18 @@ const Container = styled.div`
     height: 60vh;
     background-color: #fcf5f5;
     display:flex;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
 `
 const Title = styled.h1`
-
+    font-size: 50px;
+    margin:0px 0px 20px 0px;
 `
 const Description = styled.div`
-
+    font-size: 24px;
+    font-weight: 300;
+    margin:0px 0px 20px 0px;
 `
 const InputContainer = styled.div`
 
@@ -28,8 +32,8 @@ const Button = styled.button`
 const NewsLetter = () => {
   return (
     <Container>
-        <Title></Title>
-        <Description></Description>
+        <Title>Newsletter</Title>
+        <Description>Get timely updates from your favourite products.</Description>
         <InputContainer>
             <Input placeholder="Your Email"/>
             <Button>
