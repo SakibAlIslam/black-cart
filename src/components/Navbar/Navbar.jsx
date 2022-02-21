@@ -30,10 +30,12 @@ const SearchContainer = styled.div`
     display:flex;
     align-items: center;
     margin-left: 25px;
-    padding: 5px
+    padding: 5px;
+    border-radius:4px;
 `
 const Input = styled.input`
     border: none;
+    outline:none;
 `
 const Center = styled.div`
     flex:1;
@@ -46,7 +48,6 @@ const Logo = styled.img.attrs({
     src: `${logo}`
 })`
   width: 40%;
-
   `;
 
 const Right = styled.div`
@@ -66,10 +67,11 @@ const Navbar = () => {
     return (
         <Container>
             <Wrapper>
-                <Left><Language>EN</Language>
+                <Left>
+                    <Language>EN</Language>
                     <SearchContainer>
                         <Input />
-                        <SearchOutlinedIcon style={{color:'gray', fontSize:'16px'}}/>
+                        <SearchOutlinedIcon style={{ color: 'gray', fontSize: '16px' }} />
                     </SearchContainer>
                 </Left>
                 <Center><Logo /></Center>
@@ -77,7 +79,13 @@ const Navbar = () => {
                     <MenuLink>Register</MenuLink>
                     <MenuLink>Log In</MenuLink>
                     <MenuLink>
-                        <Badge badgeContent={4} color="primary">
+                        <Badge badgeContent={4}
+                            sx={{
+                                "& .MuiBadge-badge": {
+                                    color: "white",
+                                    backgroundColor: "#ffc303"
+                                }
+                            }}>
                             <ShoppingCartOutlinedIcon color="action" />
                         </Badge>
                     </MenuLink>
