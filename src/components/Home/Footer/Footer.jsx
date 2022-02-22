@@ -1,7 +1,7 @@
 import { Facebook, Instagram, LinkedIn, MailOutline, Phone, Pinterest, Room, Twitter, WhatsApp } from '@mui/icons-material';
 import React from 'react'
 import styled from 'styled-components'
-import logo from '../Navbar/logo/blackcartLogo.png'
+import logo from '../../Navbar/logo/blackcartLogo.png'
 
 const Container = styled.div`
     display:flex;
@@ -107,15 +107,15 @@ const Footer = () => {
             <Right>
                 <Title>Contact</Title>
                 <ContactItem>
-                    <Room sx={{marginRight: '10px'}}/>
+                    <Room sx={{ marginRight: '10px' }} />
                     32, Justice SM Morshed Sharany Agargoan
                 </ContactItem>
                 <ContactItem>
-                    <Phone sx={{marginRight: '10px'}}/>
+                    <Phone sx={{ marginRight: '10px' }} />
                     +880 1931098743
                 </ContactItem>
                 <ContactItem>
-                    <MailOutline sx={{marginRight: '10px'}}/>
+                    <MailOutline sx={{ marginRight: '10px' }} />
                     blackCart@gmail.com
                 </ContactItem>
                 <Payment src="https://i.ibb.co/Tvg28r9/48-480088-payment-method-credit-card-master-card-hd-png.png" />
